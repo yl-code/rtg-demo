@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import { TransitionDemo } from "./transition-demo/transition-demo";
+import { CssTransition } from "./demo/cssTransition/cssTransition";
+import "./index.scss";
 
-ReactDOM.render(<TransitionDemo />, document.getElementById("root"));
+ReactDOM.render(<CssTransition />, document.getElementById("root"));
