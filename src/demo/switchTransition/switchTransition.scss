@@ -1,0 +1,44 @@
+.switchTransition-demo {
+  width: 500px;
+  margin: 30px auto;
+
+  .mode {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+
+    .input-item {
+      margin: 0 20px;
+
+      input,label {
+        cursor: pointer;
+      }
+    }
+  }
+  .btn {
+    margin: 10px auto;
+  }
+
+
+  .my-enter{
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  .my-enter-active{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .my-exit{
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  .my-exit-active{
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  .my-enter-active,
+  .my-exit-active{
+    transition: opacity 1s, transform 1s;
+  }
+  
+}

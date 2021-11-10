@@ -1,36 +1,41 @@
 import React, { useState } from "react";
-import { Button, Alert } from "react-bootstrap";
 import { CSSTransition } from "react-transition-group";
 import "./cssTransition.scss";
 
-export function CssTransition() {
-  const [showButton, setShowButton] = useState(true);
-  const [showMessage, setShowMessage] = useState(false);
+export function CssTransitionDemo() {
+  const timeout = 3000;
+
+  const [flag, setFlag] = useState(true);
 
   return (
-    <div className="cssTransition">
-      {showButton && (
-        <Button onClick={() => setShowMessage(true)} size="lg">
-          Show Message
-        </Button>
-      )}
-
+    <div className="cssTransition-demo">
       <CSSTransition
-        in={showMessage}
-        timeout={300}
-        classNames="alert"
-        unmountOnExit
-        onEnter={() => setShowButton(false)}
-        onExited={() => setShowButton(true)}
+        in={flag}
+        timeout={timeout}
+        classNames="my"
+        appear
+        onEnter={(node, isAppearing) => {
+          console.log(`onEnter ${node.clientWhidth}`, isAppearing);
+        }}
+        onEntering={(node, isAppearing) => {
+          console.log(`onEntering ${node.clientWhidth}`, isAppearing);
+        }}
+        onEntered={(node, isAppearing) => {
+          console.log(`onEntered ${node.clientWhidth}`, isAppearing);
+        }}
+        onExit={(node, isAppearing) => {
+          console.log(`onExit ${node.clientWhidth}`, isAppearing);
+        }}
+        onExited={(node, isAppearing) => {
+          console.log(`onExited ${node.clientWhidth}`, isAppearing);
+        }}
       >
-        <Alert
-          variant="primary"
-          dismissible
-          onClose={() => setShowMessage(false)}
-        >
-          Animated alert message
-        </Alert>
+        <div className="box" style={{ transition: `${timeout}ms` }}></div>
       </CSSTransition>
+
+      <div className="btn" onClick={() => setFlag(!flag)}>
+        toggle
+      </div>
     </div>
   );
 }

@@ -1,24 +1,56 @@
-.cssTransition {
+// @keyframes {
+//   0% {
+//     width
+//   }
+// }
+
+.cssTransition-demo {
   width: 500px;
   margin: 30px auto;
 
-  
+  .box {
+    height: 50px;
+    border: 2px solid transparent;
+    // width: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: #cfe2ff;
+  }
 
-  .alert-enter {
-    opacity: 0;
-    transform: scale(0.9);
+
+
+  .my-appear {
+    width: 0;
   }
-  .alert-enter-active {
-    opacity: 1;
-    transform: translateX(0);
-    transition: opacity 300ms, transform 300ms;
+
+  .my-appear-active{
+    width: 50px;
   }
-  .alert-exit {
-    opacity: 1;
+
+  .my-appear-done{
+    width: 50px;
   }
-  .alert-exit-active {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: opacity 300ms, transform 300ms;
+
+  .my-enter  {
+    width: 50px;
+  }
+
+  .my-enter-active{
+    width: 200px;
+  }
+
+  .my-enter-done {
+    width: 500px;
+  }
+
+  .my-exit {
+    width: 500px;
+  }
+  
+  .my-exit-active {
+    width: 200px;
+  }
+  .my-exit-done {
+    width: 0px;
   }
 }

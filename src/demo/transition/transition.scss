@@ -1,0 +1,40 @@
+.transition-demo {
+  width: 500px;
+  margin: 30px auto;
+
+  .box {
+    height: 50px;
+    // border: 2px solid transparent;
+    // width: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    // background-color: #cce5ff;
+  }
+
+
+
+  // 已离开
+  .exited {
+    width: 20%;
+    background: #e2e3e5;
+  }
+
+  // 离开中
+  .exiting {
+    background: #f8d7da;
+    width: 100%;
+  }
+
+  // 已进入
+  .entered {
+    width: 20%;
+    background: #cfe2ff;
+  }
+
+  // 进入中
+  .entering {
+    width: 100%;
+    background: #d1e7dd;
+  }
+
+}

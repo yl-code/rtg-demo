@@ -1,1 +1,10 @@
-@import "~bootstrap/scss/bootstrap" 
+.btn {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  padding: 10px 20px;
+  border-radius: 4px;
+  width: fit-content;
+  cursor: pointer;
+  margin: auto;
+}

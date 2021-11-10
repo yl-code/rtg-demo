@@ -1,0 +1,49 @@
+.transitionGroup-demo {
+  width: 500px;
+  margin: 30px auto;
+
+  .item-box {
+    width: 300px;
+    margin:20px auto;
+
+    .del-btn {
+      padding: 0 10px;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        color: #dc3545;
+      }
+    }
+  }
+  .item {
+    margin: 4px 0;
+    padding: 10px 0;
+    border-radius: 4px;
+    background: #cfe2ff;
+  }
+
+
+  .my-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+    background: #dc3545;
+  }
+  .my-enter-active {
+    opacity: 1;
+    transform: translateX(0%);
+    background: #cfe2ff;
+  }
+  .my-enter-done {
+    background: #198754;
+  }
+  .my-exit {
+    opacity: 1;
+    transform: translateX(0%);
+    background: #dc3545;
+  }
+  .my-exit-active {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
