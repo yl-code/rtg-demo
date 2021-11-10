@@ -10,35 +10,31 @@
     .input-item {
       margin: 0 20px;
 
-      input,label {
+      input,
+      label {
         cursor: pointer;
       }
     }
   }
-  .btn {
-    margin: 10px auto;
-  }
 
-
-  .my-enter{
+  .my-enter {
     opacity: 0;
     transform: translateX(-100%);
   }
-  .my-enter-active{
+  .my-enter-active {
     opacity: 1;
     transform: translateX(0%);
   }
-  .my-exit{
+  .my-exit {
     opacity: 1;
     transform: translateX(0%);
   }
-  .my-exit-active{
+  .my-exit-active {
     opacity: 0;
     transform: translateX(100%);
   }
   .my-enter-active,
-  .my-exit-active{
+  .my-exit-active {
     transition: opacity 1s, transform 1s;
   }
-  
 }

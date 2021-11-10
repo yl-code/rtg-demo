@@ -45,7 +45,7 @@ export function SwitchTransitionDemo() {
           }}
           classNames="my"
         >
-          <div className="btn" onClick={() => setState(!state)}>
+          <div className="btn toogle" onClick={() => setState(!state)}>
             toggle
           </div>
         </CSSTransition>

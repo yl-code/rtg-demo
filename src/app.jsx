@@ -7,15 +7,25 @@ import { TransitionGroupDemo } from "./demo/transitionGroup/transitionGroup";
 export default function app() {
   return (
     <div className="app">
-      <h3>Transition-Demo</h3>
-      <TransitionDemo></TransitionDemo>
-      <hr />
+      <div className="demo-box">
+        <h3>Transition-Demo</h3>
+        <TransitionDemo></TransitionDemo>
+      </div>
 
-      <h3>CssTransition-Demo</h3>
-      <CssTransitionDemo></CssTransitionDemo>
+      <div className="demo-box">
+        <h3>CssTransition-Demo</h3>
+        <CssTransitionDemo></CssTransitionDemo>
+      </div>
 
-      <SwitchTransitionDemo></SwitchTransitionDemo>
-      <TransitionGroupDemo></TransitionGroupDemo>
+      <div className="demo-box">
+        <h3>SwitchTransition-Demo</h3>
+        <SwitchTransitionDemo></SwitchTransitionDemo>
+      </div>
+
+      <div className="demo-box">
+        <h3>TransitionGroup-Demo</h3>
+        <TransitionGroupDemo></TransitionGroupDemo>
+      </div>
     </div>
   );
 }
