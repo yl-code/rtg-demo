@@ -23,10 +23,14 @@
     background: #cfe2ff;
   }
 
+
+
+
+
   .my-enter {
     opacity: 0;
     transform: translateX(-100%);
-    background: #dc3545;
+    background: #cfe2ff;
   }
   .my-enter-active {
     opacity: 1;
@@ -34,8 +38,8 @@
     background: #cfe2ff;
   }
   .my-enter-done {
-    background: #198754;
     color: white;
+    background: #198754;
   }
   .my-exit {
     opacity: 1;
@@ -45,5 +49,6 @@
   .my-exit-active {
     opacity: 0;
     transform: translateX(100%);
+    background: #dc3545;
   }
 }

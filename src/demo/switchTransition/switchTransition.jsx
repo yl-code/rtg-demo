@@ -3,9 +3,7 @@ import { SwitchTransition, CSSTransition } from "react-transition-group";
 import "./switchTransition.scss";
 
 export function SwitchTransitionDemo() {
-  // const modes = ["out-in", "in-out"];
-
-  const [mode, setMode] = React.useState("out-in");
+  const [mode, setMode] = React.useState("in-out");
   const [state, setState] = React.useState(true);
 
   return (
@@ -21,7 +19,7 @@ export function SwitchTransitionDemo() {
               setMode(e.target.value);
             }}
           />
-          <label for="in-out">in-out</label>
+          <label htmlFor="in-out">in-out</label>
         </div>
         <div className="input-item">
           <input
@@ -33,7 +31,7 @@ export function SwitchTransitionDemo() {
               setMode(e.target.value);
             }}
           />
-          <label for="out-in">out-in</label>
+          <label htmlFor="out-in">out-in</label>
         </div>
       </div>
 
@@ -46,7 +44,7 @@ export function SwitchTransitionDemo() {
           classNames="my"
         >
           <div className="btn toogle" onClick={() => setState(!state)}>
-            toggle
+            {mode === "in-out" ? "先进后出" : "先出后进"}
           </div>
         </CSSTransition>
       </SwitchTransition>

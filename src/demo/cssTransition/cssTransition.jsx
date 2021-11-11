@@ -3,9 +3,10 @@ import { CSSTransition } from "react-transition-group";
 import "./cssTransition.scss";
 
 export function CssTransitionDemo() {
-  const timeout = 3000;
+  const timeout = 500;
 
   const [flag, setFlag] = useState(true);
+  const [appearing, setAppearing] = useState(false);
 
   return (
     <div className="cssTransition-demo">
@@ -15,26 +16,26 @@ export function CssTransitionDemo() {
         classNames="my"
         appear
         onEnter={(node, isAppearing) => {
-          console.log(`onEnter ${node.clientWhidth}`, isAppearing);
+          setAppearing(isAppearing);
+          console.log(`onEnter ${node.tagName}`, isAppearing);
         }}
         onEntering={(node, isAppearing) => {
-          console.log(`onEntering ${node.clientWhidth}`, isAppearing);
+          setAppearing(isAppearing);
+          console.log(`onEntering ${node.tagName}`, isAppearing);
         }}
         onEntered={(node, isAppearing) => {
-          console.log(`onEntered ${node.clientWhidth}`, isAppearing);
+          setAppearing(isAppearing);
+          console.log(`onEntered ${node.tagName} `, isAppearing);
         }}
-        onExit={(node, isAppearing) => {
-          console.log(`onExit ${node.clientWhidth}`, isAppearing);
-        }}
-        onExited={(node, isAppearing) => {
-          console.log(`onExited ${node.clientWhidth}`, isAppearing);
+        onExit={(_node) => {
+          setAppearing(false);
         }}
       >
         <div className="box" style={{ transition: `${timeout}ms` }}></div>
       </CSSTransition>
 
       <div className="btn" onClick={() => setFlag(!flag)}>
-        toggle
+        {appearing ? "入场的动画" : flag ? "进入的动画" : "退出的动画"}
       </div>
     </div>
   );

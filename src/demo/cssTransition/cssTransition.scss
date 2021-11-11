@@ -1,9 +1,3 @@
-// @keyframes {
-//   0% {
-//     width
-//   }
-// }
-
 .cssTransition-demo {
   width: 500px;
   margin: 30px auto;
@@ -11,46 +5,46 @@
   .box {
     height: 50px;
     border: 2px solid transparent;
-    // width: 20px;
+    width: 500px;
     border-radius: 4px;
     margin-bottom: 20px;
-    background-color: #cfe2ff;
   }
 
 
 
   .my-appear {
-    width: 0;
+    background: #f5f6f8;
+    height: 150px;
   }
-
   .my-appear-active{
-    width: 50px;
+    background: #f5f6f8;
+    height: 150px;
   }
-
   .my-appear-done{
-    width: 50px;
+    background: #cfe2ff;
+    height: 150px;
   }
 
   .my-enter  {
-    width: 50px;
+    background: #cfe2ff;
+    height: 50px;
   }
-
   .my-enter-active{
-    width: 200px;
+    background: #cfe2ff;
+    height: 50px;
   }
-
   .my-enter-done {
-    width: 500px;
+    background: #198754;
+    height: 50px;
   }
 
   .my-exit {
-    width: 500px;
+    background: #dc3545;
   }
-  
   .my-exit-active {
-    width: 200px;
+    background: #dc3545;
   }
   .my-exit-done {
-    width: 0px;
+    background: transparent;
   }
 }

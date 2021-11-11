@@ -4,37 +4,42 @@
 
   .box {
     height: 50px;
-    // border: 2px solid transparent;
-    // width: 20px;
+    width: 500px;
     border-radius: 4px;
     margin-bottom: 20px;
-    // background-color: #cce5ff;
+    margin: auto;
+    // background-color: #cfe2ff;
+    // transform: translateX(-100%);
   }
 
 
 
   // 已离开
   .exited {
-    width: 20%;
-    background: #e2e3e5;
+    opacity: 0;
+    background: #cfe2ff;
+    transform: translateX(100%);
   }
 
   // 离开中
   .exiting {
-    background: #f8d7da;
-    width: 100%;
+    background: #dc3545;
+    opacity: 1;
+    transform: translateX(0%);
   }
 
   // 已进入
   .entered {
-    width: 20%;
-    background: #cfe2ff;
+    opacity: 1;
+    background: #198754;
+    transform: translateX(0%);
   }
 
   // 进入中
   .entering {
-    width: 100%;
-    background: #d1e7dd;
+    opacity: 0;
+    background: #cfe2ff;
+    transform: translateX(-100%);
   }
 
 }
